@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        
+        iframe {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 140%;
+            overflow-x: hidden;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="ifram" src="http://vip.busi.me/"></iframe>
+</body>
+<script src="jquery-1.7.1.min.js"></script>
+<script>
+    onload = function() {
+        console.log(111);
+        $.ajax({
+            dataType: 'jsonp',
+            data: {
+                "s": "miku"
+            },
+            url: "./get.php",
+            success: function(data) {
+                console.log(data);
+            }
+        })
+    }
+</script>
+
+</html>

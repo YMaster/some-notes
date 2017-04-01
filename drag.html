@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 600px;
+            background-color: #ccc;
+            position: absolute;
+        }
+        
+        p {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="./jQuery.dragMove.js"></script>
+    <script src="./dragEveryDiv.js"></script>
+</head>
+
+<body>
+    <p style="margin-left: 600px;"></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+</body>
+<script>
+    // $(function() {
+    //     $('div').dragMove();
+    // });
+    // var dom = document.querySelector('div');
+    // dragMove(dom);
+    var box = document.querySelector('div');
+    dragEveryBox(box);
+    // $(function() {
+    //     $.dragEventBox();
+    // })
+</script>
+
+</html>
