@@ -1,10 +1,14 @@
 /**
- * 如果在这之前加载入了jQuery就会默认成为jQuery的插件，使用$.dragEveryBox()或者jQuery.dragEveryBox()调用；否则直接dragEveryBox(box)即可
+ * 如果在这之前加载入了jQuery就会默认成为jQuery的插件;
+ * 引入了jQuery的情况下使用$.dragEveryBox()或者jQuery.dragEveryBox()调用，或者传入一个DOM对象，该对象以及内部的元素都能被拖拽
+ * 否则直接dragEveryBox(box)即可, box及其内部元素都可以被拖拽
  * @param {你想要被拖动的元素(默认不传参数为document)} box 
  * box is Any element which you want to drag(Remember to give it a position:"absolute").
  * If you want to turn it into a jQuery plugin,
  * introducing jQuery and using $.fn.dragEveryBox
  */
+
+
 var dragEveryBox = function(box) {
     "use strict"
     // 拖拽函数
@@ -48,4 +52,11 @@ var dragEveryBox = function(box) {
     } else {
         drag(document);
     }
+
+}
+
+if (window.jQuery) {
+    jQuery.extend({
+        dragEveryBox: dragEveryBox
+    })
 }
